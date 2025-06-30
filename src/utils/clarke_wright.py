@@ -3,7 +3,7 @@ Improved implementation of the Clarke-Wright Savings algorithm for VRP.
 """
 import math
 import operator
-from vrp_objects import Node, Edge, Route, Solution
+from src.core.vrp_objects import Edge, Route, Solution
 
 class ClarkeWrightSolver:
     """

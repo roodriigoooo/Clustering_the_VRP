@@ -7,15 +7,16 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from data_handler import DataHandler
-from clarke_wright import ClarkeWrightSolver
-from clustering import VRPClusterer
+
+#local
+from src.data.data_handler import DataHandler
+from src.utilities.clarke_wright import ClarkeWrightSolver
+from src.utilities.clustering import VRPClusterer
 from local_search import LocalSearch
 from metaheuristics import VariableNeighborhoodSearch, GuidedLocalSearch, DBSCANTabuSearch
-from evaluation import VRPEvaluator
-from advanced_visualization import AdvancedVRPVisualizer
+from src.evaluation import VRPEvaluator
+from src.viz.advanced_visualization import AdvancedVRPVisualizer
 from vrp_objects import Solution
-from sklearn.cluster import DBSCAN
 
 def solve_without_clustering(nodes, vehicle_capacity):
     """
@@ -337,9 +338,9 @@ def run_experiments(instance_names=None, verbose=True):
     data_handler = DataHandler()
 
     # Generate Kelly's instances if they don't exist
-    if not os.path.exists('data'):
+    if not os.path.exists('../../data'):
         print("Creating data directory and generating Kelly's instances...")
-        os.makedirs('data')
+        os.makedirs('../../data')
         data_handler.generate_all_kellys_instances()
 
     # If no instance names provided, use a range of Kelly's instances from small to large
@@ -357,8 +358,8 @@ def run_experiments(instance_names=None, verbose=True):
     evaluator = VRPEvaluator()
 
     # Create results directory if it doesn't exist
-    if not os.path.exists('results'):
-        os.makedirs('results')
+    if not os.path.exists('../../results'):
+        os.makedirs('../../results')
 
     # Run experiments for each instance
     for instance_name in instance_names:
@@ -477,9 +478,9 @@ def run_small_test():
     data_handler = DataHandler()
 
     # Generate Kelly's instances if they don't exist
-    if not os.path.exists('data'):
+    if not os.path.exists('../../data'):
         print("Creating data directory and generating Kelly's instances...")
-        os.makedirs('data')
+        os.makedirs('../../data')
         data_handler.generate_all_kellys_instances()
 
     # Use the smallest instance
@@ -490,8 +491,8 @@ def run_small_test():
     evaluator = VRPEvaluator()
 
     # Create results directory if it doesn't exist
-    if not os.path.exists('results'):
-        os.makedirs('results')
+    if not os.path.exists('../../results'):
+        os.makedirs('../../results')
 
     print(f"\n{'='*80}")
     print(f"Running small test for instance {instance_name}")
@@ -551,9 +552,9 @@ def run_dbscan_focused_experiments(instance_names=None, verbose=True):
     data_handler = DataHandler()
 
     # Generate Kelly's instances if they don't exist
-    if not os.path.exists('data'):
+    if not os.path.exists('../../data'):
         print("Creating data directory and generating Kelly's instances...")
-        os.makedirs('data')
+        os.makedirs('../../data')
         data_handler.generate_all_kellys_instances()
 
     # If no instance names provided, use medium to large instances
@@ -571,8 +572,8 @@ def run_dbscan_focused_experiments(instance_names=None, verbose=True):
     evaluator = VRPEvaluator()
 
     # Create results directory if it doesn't exist
-    if not os.path.exists('results'):
-        os.makedirs('results')
+    if not os.path.exists('../../results'):
+        os.makedirs('../../results')
 
     # Create a directory for DBSCAN-focused results
     dbscan_results_dir = 'results/dbscan_focused'
@@ -796,7 +797,7 @@ def run_augerat_experiments(verbose=True):
     augerat_dir = '/Users/rodrigo/Downloads/A-VRP'
 
     # Check if any Augerat instances are already imported
-    augerat_instances = [f.split('_')[0] for f in os.listdir('data') if f.endswith('_augerat_info.txt')]
+    augerat_instances = [f.split('_')[0] for f in os.listdir('../../data') if f.endswith('_augerat_info.txt')]
     augerat_instances.sort() # Ensure consistent order
 
     if not augerat_instances:
@@ -818,11 +819,11 @@ def run_augerat_experiments(verbose=True):
     evaluator = VRPEvaluator()
 
     # Create results directory if it doesn't exist
-    if not os.path.exists('results'):
-        os.makedirs('results')
+    if not os.path.exists('../../results'):
+        os.makedirs('../../results')
 
     # Create a directory for Augerat results
-    augerat_results_dir = 'results/augerat'
+    augerat_results_dir = '../../results/augerat'
     if not os.path.exists(augerat_results_dir):
         os.makedirs(augerat_results_dir)
 

@@ -13,13 +13,11 @@ with DBSCAN clustering for solving the Vehicle Routing Problem:
 3. DBSCAN-Tabu Search: A specialized tabu search that leverages DBSCAN
    clustering information to guide the search.
 """
-import numpy as np
 import math
 import copy
-import time
 import random
 from collections import defaultdict
-from vrp_objects import Node, Edge, Route, Solution
+from vrp_objects import Edge, Route
 
 class VariableNeighborhoodSearch:
     """

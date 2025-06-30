@@ -3,16 +3,12 @@ Advanced visualization tools for VRP solutions with a focus on DBSCAN clustering
 """
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.cm as cm
-from matplotlib.colors import Normalize
 from matplotlib.patches import Polygon
-from scipy.spatial import ConvexHull, Voronoi, voronoi_plot_2d
+from scipy.spatial import ConvexHull
 from scipy.ndimage import gaussian_filter
-import pandas as pd
 import seaborn as sns
-from sklearn.metrics import silhouette_samples, silhouette_score
+from sklearn.metrics import silhouette_score
 from sklearn.cluster import DBSCAN
-from collections import defaultdict
 
 class AdvancedVRPVisualizer:
     """

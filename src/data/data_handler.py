@@ -4,7 +4,8 @@ Data handler for VRP instances, including Kelly's instances.
 import os
 import math
 import numpy as np
-from vrp_objects import Node, Edge, Solution, Route
+from src.core.vrp_objects import Node
+
 
 class DataHandler:
     """
@@ -12,8 +13,8 @@ class DataHandler:
     """
     def __init__(self):
         # Create data directory if it doesn't exist
-        if not os.path.exists('data'):
-            os.makedirs('data')
+        if not os.path.exists('../../data'):
+            os.makedirs('../../data')
 
     def generate_kellys_instance(self, instance_name, num_customers, num_vehicles,
                                 seed=42, save=True):
@@ -92,8 +93,8 @@ class DataHandler:
             num_vehicles: Number of vehicles
         """
         # Create data directory if it doesn't exist
-        if not os.path.exists('data'):
-            os.makedirs('data')
+        if not os.path.exists('../../data'):
+            os.makedirs('../../data')
 
         # Save nodes to file
         with open(f'data/{instance_name}_input_nodes.txt', 'w') as f:
@@ -291,8 +292,8 @@ class DataHandler:
             List of instance names that were imported
         """
         # Create data directory if it doesn't exist
-        if not os.path.exists('data'):
-            os.makedirs('data')
+        if not os.path.exists('../../data'):
+            os.makedirs('../../data')
 
         # Get all .vrp files in the directory
         vrp_files = [f for f in os.listdir(directory_path) if f.endswith('.vrp')]

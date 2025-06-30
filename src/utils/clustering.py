@@ -6,7 +6,7 @@ import math
 from sklearn.cluster import KMeans, DBSCAN, AgglomerativeClustering
 from sklearn.metrics import silhouette_score
 from scipy.spatial.distance import cdist
-from vrp_objects import Node
+
 
 class VRPClusterer:
     """
