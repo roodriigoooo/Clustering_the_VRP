@@ -1,0 +1,5 @@
+Original file: /Users/rodrigo/Downloads/A-VRP/A-n80-k10.vrp
+Instance type: Augerat
+Number of customers: 79
+Number of vehicles: 10
+Vehicle capacity: 100

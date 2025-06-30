@@ -1,0 +1,6 @@
+Instance: A-n34-k5
+Number of customers: 33
+Number of vehicles: 5
+Total demand: 460
+Average demand per vehicle: 92.00
+Recommended vehicle capacity: 111

@@ -1,0 +1,6 @@
+Instance: Kelly_n100_k10
+Number of customers: 100
+Number of vehicles: 10
+Total demand: 1544
+Average demand per vehicle: 154.40
+Recommended vehicle capacity: 186

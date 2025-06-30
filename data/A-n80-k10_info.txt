@@ -1,0 +1,6 @@
+Instance: A-n80-k10
+Number of customers: 79
+Number of vehicles: 10
+Total demand: 942
+Average demand per vehicle: 94.20
+Recommended vehicle capacity: 114

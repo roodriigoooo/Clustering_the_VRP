@@ -1,0 +1,6 @@
+Instance: Kelly_n75_k8
+Number of customers: 75
+Number of vehicles: 8
+Total demand: 1176
+Average demand per vehicle: 147.00
+Recommended vehicle capacity: 177
