@@ -4,14 +4,13 @@ Test script for the VRP solution framework.
 import unittest
 import os
 import math
-import numpy as np
 import matplotlib.pyplot as plt
-from data_handler import DataHandler
-from clarke_wright import ClarkeWrightSolver
-from clustering import VRPClusterer
-from local_search import LocalSearch
-from evaluation import VRPEvaluator
-from vrp_objects import Node, Edge, Route, Solution
+from src.data.data_handler import DataHandler
+from src.utils.clarke_wright import ClarkeWrightSolver
+from src.utils.clustering import VRPClusterer
+from src.core.local_search import LocalSearch
+from src.eval.evaluation import VRPEvaluator
+from src.core.vrp_objects import Node, Edge, Route, Solution
 
 class TestVRPFramework(unittest.TestCase):
     """Test cases for the VRP solution framework."""
