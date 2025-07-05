@@ -1,5 +1,7 @@
 # Vehicle Routing Problem (VRP) Solution Framework
 
+#### *Lorena Pinillos*, *Laura Rodríguez* and *Rodrigo Sastré*
+
 This repository contains an solution framework for the Vehicle Routing Problem (VRP) with a focus on optimizing the cluster-route strategy and applying it to Kelly's instances.
 
 ## Overview
